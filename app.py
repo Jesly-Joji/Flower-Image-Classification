@@ -1,4 +1,4 @@
-#IMPORT STATEMENTS
+# Import Statements
 import streamlit as st
 import torch
 import torchvision.transforms as transforms
@@ -25,24 +25,24 @@ if uploaded_image:
     model = torch.load("model.pt")
     model.eval()  # Set the model to evaluation mode
 
-    transform=transforms.Compose([
-          transforms.Resize((28,28)),
-          transforms.ToTensor()
-          ])
+    # Define image transformations
+    transform = transforms.Compose([
+        transforms.Resize((28, 28)),
+        transforms.ToTensor()
+    ])
 
+    classes = ["Daisy", "Dandelion"]
     
-
     # Load the image and preprocess
     image = Image.open(uploaded_image)
-    image_tensor=transform(image)
-    image_tensor=image_tensor.unsqueeze(0)
-   
+    image_tensor = transform(image)
+    image_tensor = image_tensor.unsqueeze(0)  # Add batch dimension
 
     # Make predictions
     with torch.no_grad():
-        pred=model(image_tensor)
-       
-    pred_index=pred.argmax(1)
-    pred_class=classes[pred_index.item()]
+        pred = model(image_tensor)
+    
+    pred_index = pred.argmax(1)  # Get index of the predicted class
+    pred_class = classes[pred_index.item()]  # Get class name
   
     st.write(f"Predicted Class: {pred_class}")
