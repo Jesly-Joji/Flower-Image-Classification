@@ -4,4 +4,5 @@ st.title("Daisy/ Dandellion Flower Classifcation")
 
 uploaded_image = st.file_uploader("Upload the Image", type=["png","jpeg","jpg"])
 
-st.image(uploaded_image)
+if uploaded_image:
+   st.image(uploaded_image)
