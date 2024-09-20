@@ -9,7 +9,7 @@ import requests
 st.title("Daisy/Dandelion Flower Classification")
 
 # File uploader for the image
-uploaded_image = st.file_uploader("Upload the Image", type=["png", "jpeg", "jpg"])
+uploaded_image = st.file_uploader(type=["png", "jpeg", "jpg"])
 
 if uploaded_image:
     # Display the uploaded image
