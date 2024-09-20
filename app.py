@@ -36,7 +36,7 @@ if uploaded_image:
     # Load the image and preprocess
     image = Image.open(uploaded_image)
     image_tensor = transform(image)
-    image_tensor = image_tensor.unsqueeze(0)  # Add batch dimension
+   # image_tensor = image_tensor.unsqueeze(0)  # Add batch dimension
 
     # Make predictions
     with torch.no_grad():
