@@ -25,26 +25,24 @@ if uploaded_image:
     model = torch.load("model.pt")
     model.eval()  # Set the model to evaluation mode
 
-    # Preprocess the uploaded image
-    def preprocess_image(image):
-        transform=transforms.Compose([
+    transform=transforms.Compose([
           transforms.Resize((28,28)),
           transforms.ToTensor()
           ])
-        return transform(image).unsqueeze(0)  # Add batch dimension
+
+    
 
     # Load the image and preprocess
     image = Image.open(uploaded_image)
-    image_tensor = preprocess_image(image)
+    image_tensor=transform(image)
+    image_tensor=image_tensor.unsqueeze(0)
+   
 
     # Make predictions
     with torch.no_grad():
-        output = model(image_tensor)
-        _, predicted = torch.max(output, 1)
-
-    # Map the predicted class index to flower name
-    class_names = ["Daisy", "Dandelion"]  # Adjust based on your model's output
-    predicted_class = class_names[predicted.item()]
-
-    # Display the prediction
-    st.write(f"Predicted Class: {predicted_class}")
+        pred=model(image_tensor)
+       
+    pred_index=pred.argmax(1)
+    pred_class=classes[pred_index.item()]
+  
+    st.write(f"Predicted Class: {pred_class}")
