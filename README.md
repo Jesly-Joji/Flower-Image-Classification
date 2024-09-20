@@ -12,3 +12,8 @@ Used CNN for Image classifcation<br>
 
 <b>PREDICTION OUTPUT2</b><br>
 ![output2](https://github.com/user-attachments/assets/812c9ed8-491b-4d40-a884-08862ee31280)
+
+<b>STREAMLIT OUTPUTS</b><br>
+![Screenshot (654)](https://github.com/user-attachments/assets/10e6480d-17c1-45d1-a279-b25aa5b50f90)
+
+![Screenshot (656)](https://github.com/user-attachments/assets/3d30902a-0ce9-41b2-b471-91c06cf17818)
