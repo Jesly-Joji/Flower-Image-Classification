@@ -2,10 +2,11 @@ Used CNN for Image classifcation<br>
 <b>TOOLS:</b> PyTorch,Kaggle
 
 <b>ACCURACY and LOSS CURVE</b><br>
-![Accuracy_Curve](https://github.com/user-attachments/assets/735e2788-ea93-45d3-86cd-08b53b79f8b0)
+![download](https://github.com/user-attachments/assets/d9092fd7-a3e3-4b68-8f1e-2216325c8c68)
 
 <b>CONFUSION MATRIX</b><br>
-![confusion_matrix](https://github.com/user-attachments/assets/ac5864d1-ff89-4a88-b546-d6ba1eb3a2a4)
+![download](https://github.com/user-attachments/assets/726be605-8e0f-443a-afc0-30819d8c07d0)
+
 
 <b>PREDICTION OUTPUT1</b><br>
 ![output1](https://github.com/user-attachments/assets/b14ff3cd-7da0-4cb4-973f-cd2a9a688461)
